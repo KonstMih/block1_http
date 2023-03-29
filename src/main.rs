@@ -22,13 +22,13 @@ fn main() {
     router.get("/", get_form, "root");
     //router.post("/gcd", post_gcd, "gcd");    
     
-	println!("Serving on http://localhost:3000...");
-	Iron::new(router).http("localhost:3000").unwrap();
+	println!("Serving on http://192.168.127.200:3000...");
+	Iron::new(router).http("192.168.127.200:3000").unwrap();
 }
 
 fn get_form(_request: &mut Request) -> IronResult<Response> {
 
-	    let content = fs::read_to_string("data.json").expect("Файл не прочитался");
+	    let content = fs::read_to_string("/home/asutp/data.json").expect("Файл не прочитался");
     	//let content = fs::read_to_string("/home/asutp/data.json").expect("Файл не прочитался");
     	let rows = rm_head(content);
     	
@@ -43,8 +43,8 @@ fn get_form(_request: &mut Request) -> IronResult<Response> {
 fn rm_head(mut rows_str: String) -> String {
     let num:usize;
     let data: String;
-    if rows_str.len() > 68655 {
-        num = rows_str.len() - 68655;
+    if rows_str.len() > 1113700 {                 //68655
+        num = rows_str.len() - 1113700;
         data = rows_str.split_off(num);
     } else {
         data = rows_str;

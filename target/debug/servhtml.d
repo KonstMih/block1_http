@@ -1,1 +1,1 @@
-/home/asutp/code/rust_progect/block_tec/html_serv/target/debug/servhtml: /home/asutp/code/rust_progect/block_tec/html_serv/src/main.rs
+/home/asutp/code/rustprogect/block1_http/target/debug/servhtml: /home/asutp/code/rustprogect/block1_http/src/main.rs
